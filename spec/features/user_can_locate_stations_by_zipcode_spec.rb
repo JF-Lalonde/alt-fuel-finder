@@ -3,7 +3,7 @@ require 'rails_helper'
 feature "User enters zipcode" do
   scenario "and views corresponding stations" do
     visit "/"
-    fill_in "Locate", with: "80203"
+    fill_in "Searching", with: "80203"
     click_on "Locate"
 
     expect(current_path).to eq("/search")

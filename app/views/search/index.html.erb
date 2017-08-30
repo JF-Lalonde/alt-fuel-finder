@@ -1,0 +1,9 @@
+<h1> Here are the 10 closests stations: </h1>
+
+<% @stations.each do |station| %>
+  <%= station.name %>
+  <%= station.address %>
+  <%= station.fuel_types %>
+  <%= station.distance %>
+  <%= station.access_time %>
+<% end %>
