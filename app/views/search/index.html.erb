@@ -1,9 +1,13 @@
 <h1> Here are the 10 closests stations: </h1>
 
 <% @stations.each do |station| %>
-  <%= station.name %>
-  <%= station.address %>
-  <%= station.fuel_types %>
-  <%= station.distance %>
-  <%= station.access_time %>
+  <ul class="station">
+    <li class="name"><%= station.name %></li>
+    <li class="address"><%= station.address %></li>
+    <li class="fuel_type"><%= station.fuel_type %></li>
+    <li class="distance"><%= station.distance %></li>
+    <li class="access_time"><%= station.access_times %></li>
+  </ul>
 <% end %>
+
+<%#Write css classes that you wanted to test for in the test %>
