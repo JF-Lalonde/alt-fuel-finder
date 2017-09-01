@@ -7,4 +7,12 @@ class NrelStation
     @distance = attrs[:distance]
     @access_times = attrs[:access_days_time]
   end
+
+  def self.search(filter)
+    raw_stations = NrelService.find_stations(filter)
+
+    raw_stations.map do |raw_station|
+      NrelStation.new(raw_station)
+    end
+  end
 end
